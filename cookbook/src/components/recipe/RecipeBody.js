@@ -12,7 +12,7 @@ export default function RecipeBody() {
                 </p>
             </div>
             <div className="px-12 py-8 flex flex-row justify-between">
-                <p>
+                <p className="mr-2">
                     Ingredients
                     <ul className="list-disc">
                         <li>
