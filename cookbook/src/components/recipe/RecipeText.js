@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function RecipeImg() {
+export default function RecipeText() {
     return (
         <div>
-            
+            text
         </div>
     )
 }

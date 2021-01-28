@@ -1,12 +1,16 @@
-import React from 'react'
-import RecipeBody from './RecipeBody';
+import React from 'react';
 import RecipeImg from './RecipeImg';
+import RecipeText from './RecipeText';
 
 export default function Recipe() {
     return (
-        <div className="">
-            <RecipeImg />
-            <RecipeBody />
+        <div>
+            <div>
+                <RecipeImg />
+            </div>
+            <div>
+                <RecipeText />
+            </div>
         </div>
     )
 }
