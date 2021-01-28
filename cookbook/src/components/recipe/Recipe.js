@@ -4,7 +4,7 @@ import RecipeImg from './RecipeImg';
 
 export default function Recipe() {
     return (
-        <div className="flex flex-row">
+        <div className="">
             <RecipeImg />
             <RecipeBody />
         </div>

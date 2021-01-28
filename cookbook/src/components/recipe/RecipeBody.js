@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function RecipeBody() {
     return (
-        <div className="w-3/4">
-            <div className="px-6">
+        <div className="">
+            <div className="">
                 <p>
                     Recipe description goes here so I'm just gonna write a bunch of stuff
                     and yeah hopefully it takes up a lot of space cuz ipsum lorem is too big to justify using I think but then again maybe
@@ -11,10 +11,10 @@ export default function RecipeBody() {
                     side which I then season both sides with lemon pepper and cajun peppers(spices? idk).
                 </p>
             </div>
-            <div className="px-12 py-8 flex flex-row justify-between">
-                <p className="mr-2">
+            <div className="">
+                <p className="">
                     Ingredients
-                    <ul className="list-disc">
+                    <ul className="">
                         <li>
                             Salmon
                         </li>
@@ -29,9 +29,9 @@ export default function RecipeBody() {
                         </li>
                     </ul>
                 </p>
-                <p className="py-2">
+                <p className="">
                     Directions
-                    <ol className="list-decimal">
+                    <ol className="">
                         <li>Put oil in pan, heat up</li>
                         <li>Place salmon fillet on pan, season the top and cook for 6 minutes</li>
                         <li>Flip salmon and cook the other side for 3 minutes. Season the top</li>
