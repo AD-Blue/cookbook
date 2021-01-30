@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from './components/Navbar';
 import Recipe from './components/recipe/Recipe';
-import { Center } from "@chakra-ui/react"
+import { Center } from "@chakra-ui/react";
+import Footer from './components/Footer';
 
 export default function App() {
     return (
@@ -10,6 +11,7 @@ export default function App() {
             <Center>
                 <Recipe />
             </Center>
+            <Footer />
         </div>
     )
 }

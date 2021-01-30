@@ -15,7 +15,7 @@ export default function Navbar() {
             ml="1rem" 
             mr="1rem" 
             borderBottomWidth="2px" 
-            mb="3rem"
+            mb="5rem"
         >
             <Text color="#777" ml="2rem">9CookBook</Text>
             <Spacer />

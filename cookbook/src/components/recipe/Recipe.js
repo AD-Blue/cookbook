@@ -23,7 +23,7 @@ export default function Recipe() {
                 />
             </GridItem>
 
-            <GridItem rowSpan={2} bg="tomato">
+            <GridItem rowSpan={2}>
                 <RecipeText />
             </GridItem>
 
