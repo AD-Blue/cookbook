@@ -1,20 +1,35 @@
 import React from 'react';
-import { Flex, Spacer, Input } from "@chakra-ui/react";
+import { Flex, Spacer, Input, Link, Box, Text } from "@chakra-ui/react";
 import { Link as RouterLink } from 'react-router-dom';
 
 export default function Navbar() {
     return (
-        <Flex flexDirection="row" bg="tomato">
-            <p>9CookBook</p>
+        <Flex 
+            flexDirection="row" 
+            pb="1rem" 
+            pt="1rem" 
+            alignItems="center" 
+            fontSize="1.2rem" 
+            fontFamily="Georgia, serif" 
+            borderBottom="solid" 
+            ml="1rem" 
+            mr="1rem" 
+            borderBottomWidth="2px" 
+            mb="3rem"
+        >
+            <Text color="#777" ml="2rem">9CookBook</Text>
             <Spacer />
             <form>
                 <label for="search">
-                    <Input id="search" type="text" placeholder="Search" />
+                    <Input id="search" type="text" placeholder="Search" borderColor="#777" size="sm" focusBorderColor="#444" _hover={{ borderColor: "#333"}} borderRadius="4px" />
                 </label>
             </form>
-            <p>Home</p>
-            <p>All Recipes</p>
-            <p>Create Your Own</p>
+            <Flex color="#b8a039">
+                <Link ml='2rem'>Home</Link>
+                <Link ml='2rem'>All Recipes</Link>
+                <Link ml='2rem' mr="2rem">Create Your Own</Link>
+            </Flex>
+            
         </Flex>
     )
 }
