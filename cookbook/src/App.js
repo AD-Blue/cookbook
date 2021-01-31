@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Create from './components/Create';
 import { GlobalProvider } from './Context/GlobalState';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import RecipeList from './components/recipe/RecipeList';
 
 export default function App() {
     return (
@@ -16,7 +17,7 @@ export default function App() {
             <Center>
                 <Switch>
                     <Route exact path="/">
-                        <Home />
+                        <RecipeList />
                     </Route>
                     <Route exact path="/create">
                         <Create />
@@ -24,6 +25,7 @@ export default function App() {
                     <Route exact path="/:id">
                         <Recipe />
                     </Route>
+
                 </Switch>
             </Center>
             <Footer />

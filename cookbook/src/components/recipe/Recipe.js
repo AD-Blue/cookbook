@@ -21,10 +21,11 @@ export default function Recipe() {
             templateColumns="1fr 3fr"
             gap={2}
             w="80%"
+            fontFamily="Georgia, serif"
         >
             <GridItem pt="2.5rem">
                 <Image 
-                    src={burger} 
+                    src="https://i.imgur.com/Kj5vyH1.jpg" 
                     boxSize="275px" 
                     fit="cover" 
                     position="relative" 
@@ -36,7 +37,7 @@ export default function Recipe() {
 
             <GridItem rowSpan={2}>
                 <Flex direction="column" borderLeft="solid" pt="4rem" pb="4rem" ml="1rem">
-                    <Text fontSize="1.3rem" pl="3rem" color="rgb(100, 100, 100)">
+                    <Text fontSize="1.3rem" pl="3rem" color="rgb(120, 120, 120)">
                         {recipe.description}
                     </Text>
                     

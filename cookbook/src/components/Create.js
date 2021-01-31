@@ -7,6 +7,7 @@ export default function Create() {
     const [description, setDesc] = useState('');
     const [steps, setSteps] = useState('');
     const [ingredients, setIngredients] = useState('');
+    const [img, setImg] = useState('');
     const [ingArr, setIngArr] = useState([]);
     const [stepsArr, setStepsArr] = useState([]);
 
@@ -19,7 +20,8 @@ export default function Create() {
             title,
             description,
             ingredients: ingArr,
-            steps: stepsArr
+            steps: stepsArr,
+            img
         }
 
         addRecipe(newRecipe);
@@ -34,6 +36,11 @@ export default function Create() {
             <FormControl mb="1rem">
                 <FormLabel>Your recipe's description</FormLabel>
                 <Input isRequired="true" placeholder="Recipe Description" value={description} onChange={(e) => setDesc(e.target.value)} borderColor="#aaa" />
+            </FormControl>
+            <FormControl mb="1rem">
+                <FormLabel>Image of your recipe</FormLabel>
+                <Input isRequired="true" placeholder="Recipe Image URL" value={img} onChange={(e) => setImg(e.target.value)} borderColor="#aaa" />
+                <FormHelperText>Copy and paste the link to an image of your food! (You can upload on sites like Imgur)</FormHelperText>
             </FormControl>
             <FormControl mb="2rem">
                 <FormLabel>What ingredients are in your recipe?</FormLabel>

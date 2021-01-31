@@ -16,6 +16,10 @@ const RecipeSchema = new mongoose.Schema({
     steps: {
         type: [String],
         required: true
+    },
+    img: {
+        type: [String],
+        required: true
     }
 })
 
