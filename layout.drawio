@@ -1,0 +1,73 @@
+<mxfile host="65bd71144e" modified="2021-01-16T10:10:37.856Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" version="13.10.0" etag="oqvtYOh6cAimrbCQbSY_" type="embed">
+    <diagram id="tZUSKxmP0hmZoFRcI1pa" name="Page-1">
+        <mxGraphModel dx="1179" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry y="40" width="850" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry y="40" width="850" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="All Recipes" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="730" y="40" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Home" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="610" y="40" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="100" width="210" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="100" width="580" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Image" style="whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="120" width="170" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Recipe name" style="whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="250" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Recipe description" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="120" width="360" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Ingredients" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="220" width="120" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Recipe Steps" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="425" y="220" width="395" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Home View" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="385" y="10" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry y="560" width="850" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="All Recipes" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="530" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="navbar" style="whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry y="560" width="850" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="(recipe card component)" style="whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry y="660" width="850" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Recipe Name" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="700" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Recipe Photo" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="680" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="(recipe card component)" style="whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry y="770" width="850" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Recipe Name" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="810" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Recipe Photo" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="790" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
