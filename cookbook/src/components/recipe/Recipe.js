@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import burger from '../../assets/burger.jpeg'
 import { Grid, GridItem, Image, Box, Text } from '@chakra-ui/react';
 import RecipeText from './RecipeText';
+import { GlobalContext } from '../../Context/GlobalState';
 
 export default function Recipe() {
+    const { recipe, getRecipe } = useContext(GlobalContext);
+
+    const id = '601602a912ee4f0dc81ef613'
+
+    useEffect(() => {
+        getRecipe(id)   //Placeholder until I get routing and stuff working lmao
+    }, [id])
+
     return (
         <Grid
             templateRows="repeat(2, 1fr)"
@@ -11,7 +20,7 @@ export default function Recipe() {
             gap={2}
             w="80%"
         >
-            <GridItem>
+            <GridItem pt="2.5rem">
                 <Image 
                     src={burger} 
                     boxSize="275px" 
@@ -28,7 +37,7 @@ export default function Recipe() {
             </GridItem>
 
             <GridItem>
-                <Text fontSize="2rem" textAlign="center">Burger</Text>
+                <Text fontSize="2.2rem" textAlign="center" lineHeight="1.3em">{recipe.title}</Text>
             </GridItem>
             
         </Grid>

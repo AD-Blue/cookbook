@@ -1,31 +1,41 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Flex, Spacer, Input, Link, Box, Text, UnorderedList, OrderedList, ListItem } from "@chakra-ui/react";
+import { GlobalContext } from '../../Context/GlobalState';
 
 export default function RecipeText() {
+    const { recipe, getRecipe } = useContext(GlobalContext);
+
+    const id = '601602a912ee4f0dc81ef613'
+
+    useEffect(() => {
+        getRecipe(id)   //Placeholder until I get routing and stuff working lmao
+    }, [id])
+
     return (
-        <Flex direction="column" borderLeft="solid" pt="2rem" pb="2rem">
-            <Text fontSize="1.5rem" pl="3rem">
-                Good burger made from ground beef. Tastes good. Very good indeed.
+        <Flex direction="column" borderLeft="solid" pt="4rem" pb="4rem" ml="1rem">
+            <Text fontSize="1.3rem" pl="3rem" color="rgb(100, 100, 100)">
+                {recipe.description}
             </Text>
             
-            <Flex direction="row" mt="7rem" justifyContent="space-around" pl="3rem">
-                <UnorderedList fontSize="1.1rem">
-                    <ListItem>Ground beef</ListItem>
-                    <ListItem>Buns</ListItem>
-                    <ListItem>Cheese</ListItem>
-                    <ListItem>Lettuce</ListItem>
-                    <ListItem>Tomato</ListItem>
-                    <ListItem>Onions</ListItem>
-                    <ListItem>Garlic</ListItem>
-                </UnorderedList>
-                <OrderedList fontSize="1.3rem" ml="3rem">
-                    <ListItem>Dice onions and garlic. Put into bowl with ground beef</ListItem>
-                    <ListItem>Mix contents of bowl then form patties</ListItem>
-                    <ListItem>Put oil of your choice into pan and, once heated, place patties onto pan</ListItem>
-                    <ListItem>Cook first side til cooked throughout. Flip</ListItem>
-                    <ListItem>Place slice of cheese on patty in the last few seconds of cooking before removing patty from the pan</ListItem>
-                    <ListItem>Place patty on bottom bun. Top with tomato and lettuce and top bun. Enjoy</ListItem>
-                </OrderedList>
+            <Flex direction="row" mt="6rem" justifyContent="space-around" pl="3rem">
+                <Box>
+                    <Text fontSize="1.5rem" fontWeight="600">Ingredients</Text>
+                    <UnorderedList fontSize="1.1rem">
+                        {recipe.ingredients.map((ingredient) => (
+                            <ListItem>{ingredient}</ListItem>
+                        ))}
+                    </UnorderedList>
+                </Box>
+                
+                <Box pl="6rem" w="80%">
+                    <Text fontSize="1.5rem" fontWeight="600">Steps</Text>
+                    <OrderedList fontSize="1.1rem">
+                        {recipe.steps.map((step) => (
+                            <ListItem>{step}</ListItem>
+                        ))}
+                    </OrderedList>
+                </Box>
+                
             </Flex>
         </Flex>
     )
