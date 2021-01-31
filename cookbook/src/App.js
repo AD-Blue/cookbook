@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from './components/Navbar';
-import Home from './components/Home';
 import Recipe from './components/recipe/Recipe';
 import { Center } from "@chakra-ui/react";
 import Footer from './components/Footer';

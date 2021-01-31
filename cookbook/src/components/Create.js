@@ -29,20 +29,20 @@ export default function Create() {
 
     return (
         <form onSubmit={onSubmit}>
-            <FormControl mb="1rem">
+            <FormControl m="auto" mb="1rem" w={["95%", "100%"]}>
                 <FormLabel>Title of your recipe</FormLabel>
                 <Input isRequired="true" placeholder="Recipe Title" value={title} onChange={(e) => setTitle(e.target.value)} borderColor="#aaa" />
             </FormControl>
-            <FormControl mb="1rem">
+            <FormControl m="auto" mb="1rem" w={["95%", "100%"]}>
                 <FormLabel>Your recipe's description</FormLabel>
                 <Input isRequired="true" placeholder="Recipe Description" value={description} onChange={(e) => setDesc(e.target.value)} borderColor="#aaa" />
             </FormControl>
-            <FormControl mb="1rem">
+            <FormControl m="auto" mb="1rem" w={["95%", "100%"]}>
                 <FormLabel>Image of your recipe</FormLabel>
                 <Input isRequired="true" placeholder="Recipe Image URL" value={img} onChange={(e) => setImg(e.target.value)} borderColor="#aaa" />
                 <FormHelperText>Copy and paste the link to an image of your food! (You can upload on sites like Imgur)</FormHelperText>
             </FormControl>
-            <FormControl mb="2rem">
+            <FormControl m="auto" mb="2rem" w={["95%", "100%"]}>
                 <FormLabel>What ingredients are in your recipe?</FormLabel>
                 <Textarea
                     placeholder="Recipe Ingredients"
@@ -56,7 +56,7 @@ export default function Create() {
                 />
                 <FormHelperText>Please use a new line for each new ingredient (hit enter after each one)</FormHelperText>
             </FormControl>
-            <FormControl mb="2rem">
+            <FormControl m="auto" mb="2rem" w={["95%", "100%"]}>
                 <FormLabel>How do we make your recipe?</FormLabel>
                 <Textarea
                     placeholder="Recipe Steps"
@@ -71,7 +71,7 @@ export default function Create() {
                 <FormHelperText>Please use a new line for each new step (hit enter after each one)</FormHelperText>
             </FormControl>
             
-            <Button borderColor="#aaa" variant="outline" mb="3rem" type="submit" onClick={() => {
+            <Button ml={["0.6rem", ""]} borderColor="#aaa" variant="outline" mb="3rem" type="submit" onClick={() => {
                 setIngArr(ingredients.split(/\r?\n/));
                 setStepsArr(steps.split(/\r?\n/));
             }}>

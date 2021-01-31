@@ -24,9 +24,9 @@ export default function Navbar() {
                     { /*<Input id="search" type="text" placeholder="Search" borderColor="#aaa" size="sm" focusBorderColor="#444" _hover={{ borderColor: "#333"}} borderRadius="4px" />*/ }
                 </label>
             </form>
-            <Flex color="#b8a039">
-                <Link as={RouterLink} to="/" ml='2rem'>All Recipes</Link>
-                <Link as={RouterLink} to="/create" ml='2rem' mr="2rem">Create Your Own</Link>
+            <Flex color="#b8a039" alignItems="center">
+                <Link as={RouterLink} to="/" ml='2rem' textAlign="center">All Recipes</Link>
+                <Link as={RouterLink} to="/create" ml='2rem' mr="2rem" textAlign="center">Create Your Own</Link>
             </Flex>
             
         </Flex>
