@@ -1,11 +1,24 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Grid, GridItem, Image, Box, Text, Flex, UnorderedList, OrderedList, ListItem, useMediaQuery } from '@chakra-ui/react';
+import { Grid, GridItem, Image, Box, Text, Flex, UnorderedList, OrderedList, ListItem, useMediaQuery, IconButton,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    MenuItemOption,
+    MenuGroup,
+    MenuOptionGroup,
+    MenuIcon,
+    MenuCommand,
+    MenuDivider, 
+} from '@chakra-ui/react';
+import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
 import { GlobalContext } from '../../Context/GlobalState';
 import { useParams } from 'react-router-dom';
 
 export default function Recipe() {
     const { recipe, getRecipe } = useContext(GlobalContext);
     const [isMobile] = useMediaQuery("(max-width: 479px")
+    const { deleteRecipe } = useContext(GlobalContext);
 
     const { id } = useParams();
 
@@ -93,7 +106,7 @@ export default function Recipe() {
                     >
                         {recipe.description}
                     </Text>
-                    
+
                     <Flex 
                         direction={[
                             "column",

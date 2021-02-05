@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid, GridItem, Image, Text, Link } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
+import { Grid, GridItem, Image, Text, Link } from '@chakra-ui/react';
 
 export default function RecipeCard({ recipe }) {
     return (
@@ -52,6 +52,7 @@ export default function RecipeCard({ recipe }) {
                     >
                         {recipe.title}
                     </Text>
+                    
                 </GridItem>
                 <GridItem pt="1rem" colSpan={[2, 1]}>
                     <Text 

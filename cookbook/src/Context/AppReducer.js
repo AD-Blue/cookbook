@@ -23,6 +23,11 @@ export default (state, action) => {
                 ...state,
                 recipes: [...state.recipes, action.payload]
             }
+        case 'UPDATE_RECIPE':
+            return {
+                ...state,
+                recipe: action.payload
+            }
         case 'RECIPE_ERROR':
             return {
                 ...state,

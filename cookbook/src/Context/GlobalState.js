@@ -84,6 +84,16 @@ export const GlobalProvider = ({ children }) => {
         }
     }
 
+    async function updateRecipe(id) {
+        await axios.put(`api/recipes/${id}`);
+
+        try {
+            
+        } catch (err) {
+            
+        }
+    }
+
     return (<GlobalContext.Provider value = {{
         recipes: state.recipes,
         recipe: state.recipe,
