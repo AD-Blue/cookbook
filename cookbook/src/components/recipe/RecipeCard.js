@@ -1,47 +1,60 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Grid, GridItem, Image, Text, Link } from '@chakra-ui/react';
+import { Flex, Spacer, Image, Text, Link, Menu, Box,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    MenuItemOption,
+    MenuGroup,
+    MenuOptionGroup,
+    MenuIcon,
+    MenuCommand,
+    MenuDivider,
+    IconButton
+    } from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons'
 
 export default function RecipeCard({ recipe }) {
     return (
-        <Link as={RouterLink} to={"/" + recipe._id}>
-            <Grid
-                templateRows="repeat(2, 1fr)"
-                templateColumns="1fr 4fr"
-                p={[
-                    "1rem",
-                    "3rem"
-                ]}
-                gap={2}
+            <Flex
                 borderRadius="7px"
                 borderWidth="3px"
                 borderColor="#444"
                 mb="2rem"
-                w={[
-                    "90%",
-                    "100%"
-                ]}
-                ml="auto"
-                mr="auto"
+                p="0 0 3rem 3rem"
             >
-                <GridItem rowSpan={[1, 2]} colSpan={1}>
-                    <Image 
-                        borderRadius="7px" 
-                        boxSize={[
-                            "100px",
-                            "100px",
-                            "150px",
-                            "200px"
-                        ]} 
-                        src={recipe.img} 
-                        fit="cover" />
-                </GridItem>
-                <GridItem 
-                    pt={[
-                        "1rem",
-                        "2rem"
-                    ]}
-                >
+                <Image 
+                    borderRadius="7px" 
+                    boxSize={[
+                        "100px",
+                        "100px",
+                        "150px",
+                        "200px"
+                    ]} 
+                    src={recipe.img} 
+                    fit="cover" 
+                    mt="3rem"
+                />
+                <Flex flexDirection="column" grow="2" pl="2rem">
+                    <Flex mb="4rem">
+                        <Spacer />
+                        <Menu>
+                            <MenuButton
+                                as={IconButton}
+                                aria-label="Options"
+                                icon={<HamburgerIcon />}
+                                size="xs"
+                                variant="outline"
+                                border="none"
+                            />
+                            <MenuList>
+                                <MenuItem>Edit</MenuItem>
+                                <MenuItem>Delete</MenuItem>
+                            </MenuList>
+                        </Menu>
+                    </Flex>
+                    
+                    <Link as={RouterLink} to={"/" + recipe._id}>
                     <Text 
                         pl="2rem" 
                         fontSize={[
@@ -52,9 +65,6 @@ export default function RecipeCard({ recipe }) {
                     >
                         {recipe.title}
                     </Text>
-                    
-                </GridItem>
-                <GridItem pt="1rem" colSpan={[2, 1]}>
                     <Text 
                         pl="2rem" 
                         fontSize={[
@@ -66,9 +76,8 @@ export default function RecipeCard({ recipe }) {
                     >
                         {recipe.description}
                     </Text>
-                </GridItem>
-            </Grid>
-        </Link>
-        
+                    </Link>
+                </Flex>
+            </Flex>
     )
 }
