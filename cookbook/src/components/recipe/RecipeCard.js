@@ -36,7 +36,7 @@ export default function RecipeCard({ recipe }) {
                     mt="3rem"
                 />
                 <Flex flexDirection="column" grow="2" pl="2rem">
-                    <Flex mb="4rem">
+                    <Flex mb="4rem" right="0">
                         <Spacer />
                         <Menu>
                             <MenuButton
@@ -56,7 +56,8 @@ export default function RecipeCard({ recipe }) {
                     
                     <Link as={RouterLink} to={"/" + recipe._id}>
                     <Text 
-                        pl="2rem" 
+                        pl="2rem"
+                        pr="3rem" 
                         fontSize={[
                             "22px",
                             "46px"
@@ -66,7 +67,8 @@ export default function RecipeCard({ recipe }) {
                         {recipe.title}
                     </Text>
                     <Text 
-                        pl="2rem" 
+                        pl="2rem"
+                        pr="3rem" 
                         fontSize={[
                             "16px",
                             "26px"
