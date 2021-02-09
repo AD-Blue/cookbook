@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Flex, Spacer, Image, Text, Link, Menu, Box,
     MenuButton,
@@ -13,8 +13,11 @@ import { Flex, Spacer, Image, Text, Link, Menu, Box,
     IconButton
     } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons'
+import { GlobalContext } from '../../Context/GlobalState'
 
 export default function RecipeCard({ recipe }) {
+    const { deleteRecipe } = useContext(GlobalContext);
+
     return (
             <Flex
                 borderRadius="7px"
@@ -48,8 +51,10 @@ export default function RecipeCard({ recipe }) {
                                 border="none"
                             />
                             <MenuList>
-                                <MenuItem>Edit</MenuItem>
-                                <MenuItem>Delete</MenuItem>
+                                <Link as={RouterLink} to={"/update/" + recipe._id}>
+                                    <MenuItem>Edit</MenuItem>
+                                </Link>    
+                                <MenuItem onClick={() => deleteRecipe(recipe)}>Delete</MenuItem>
                             </MenuList>
                         </Menu>
                     </Flex>

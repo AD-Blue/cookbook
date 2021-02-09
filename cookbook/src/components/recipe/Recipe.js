@@ -18,7 +18,6 @@ import { useParams } from 'react-router-dom';
 export default function Recipe() {
     const { recipe, getRecipe } = useContext(GlobalContext);
     const [isMobile] = useMediaQuery("(max-width: 479px")
-    const { deleteRecipe } = useContext(GlobalContext);
 
     const { id } = useParams();
 

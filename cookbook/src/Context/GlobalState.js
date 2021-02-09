@@ -84,13 +84,25 @@ export const GlobalProvider = ({ children }) => {
         }
     }
 
-    async function updateRecipe(id) {
-        await axios.put(`api/recipes/${id}`);
-
+    async function updateRecipe(recipe) {
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+        
         try {
-            
+            const res = await axios.put(`/api/recipes/update/${recipe._id}`, recipe, config);
+
+            dispatch({
+                type: 'UPDATE_RECIPE',
+                payload: res.data.data
+            })
         } catch (err) {
-            
+            dispatch({
+                type: 'RECIPE_ERROR',
+                payload: err.response.data.error
+            })
         }
     }
 
@@ -102,6 +114,7 @@ export const GlobalProvider = ({ children }) => {
         getRecipes,
         getRecipe,
         deleteRecipe,
+        updateRecipe,
         addRecipe
     }}>
         {children}
