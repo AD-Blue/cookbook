@@ -4,6 +4,8 @@ const { getRecipes, addRecipe, deleteRecipe, getRecipe, updateRecipe } = require
 
 router.route('/').get(getRecipes).post(addRecipe);
 
-router.route('/:id').delete(deleteRecipe).get(getRecipe).put(updateRecipe);
+router.route('/:id').delete(deleteRecipe).get(getRecipe);
+
+router.route('/update/:id').put(updateRecipe);
 
 module.exports = router;

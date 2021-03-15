@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { Flex, Spacer, Input, Link, Box, Text, Textarea, FormControl, Button, FormLabel, FormHelperText } from "@chakra-ui/react";
 import { GlobalContext } from '../Context/GlobalState';
+import { Formik, Field, Form, ErrorMessage, FieldArray } from 'formik';
 
 export default function Create() {
     const [title, setTitle] = useState('');

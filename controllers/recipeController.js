@@ -105,9 +105,11 @@ exports.updateRecipe = async (req, res, next) => {
         
         await Recipe.updateOne({ _id: req.params.id }, req.body)
 
+        const updatedRecipe = await Recipe.findById(req.params.id);
+
         return res.status(200).json({
             success: true,
-            data: recipe
+            data: updatedRecipe
         })
 
     } catch (err) {

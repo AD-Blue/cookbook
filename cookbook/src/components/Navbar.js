@@ -27,6 +27,7 @@ export default function Navbar() {
             <Flex color="#b8a039" alignItems="center">
                 <Link as={RouterLink} to="/" ml='2rem' textAlign="center">All Recipes</Link>
                 <Link as={RouterLink} to="/create" ml='2rem' mr="2rem" textAlign="center">Create Your Own</Link>
+                <Link as={RouterLink} to="/test" ml='2rem' mr="2rem" textAlign="center">Testing Features</Link>
             </Flex>
             
         </Flex>

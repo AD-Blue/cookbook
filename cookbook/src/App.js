@@ -8,6 +8,7 @@ import { GlobalProvider } from './Context/GlobalState';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import RecipeList from './components/recipe/RecipeList';
 import Update from './components/Update';
+import Test from './components/Test';
 
 export default function App() {
     return (
@@ -16,6 +17,9 @@ export default function App() {
                 <Navbar />
             <Center>
                 <Switch>
+                    <Route exact path="/test">
+                        <Test />
+                    </Route>
                     <Route exact path="/">
                         <RecipeList />
                     </Route>
@@ -28,7 +32,7 @@ export default function App() {
                     <Route exact path="/update/:id">
                         <Update />
                     </Route>
-
+                    
                 </Switch>
             </Center>
             <Footer />
