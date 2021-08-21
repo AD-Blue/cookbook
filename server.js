@@ -3,6 +3,7 @@ const path = require('path');    //for our config
 const dotenv = require('dotenv');
 const colors = require('colors');
 const connectDB = require('./config/db');
+const cors = require('cors');
 
 dotenv.config({ path: './config/config.env' });
 
@@ -11,6 +12,8 @@ connectDB();
 const recipes = require('./routes/recipes');
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
