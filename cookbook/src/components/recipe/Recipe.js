@@ -1,17 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Grid, GridItem, Image, Box, Text, Flex, UnorderedList, OrderedList, ListItem, useMediaQuery, IconButton,
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuIcon,
-    MenuCommand,
-    MenuDivider, 
-} from '@chakra-ui/react';
-import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
+import React, { useContext, useEffect } from 'react';
+import { Grid, GridItem, Image, Box, Text, Flex, UnorderedList, OrderedList, ListItem, useMediaQuery} from '@chakra-ui/react';
 import { GlobalContext } from '../../Context/GlobalState';
 import { useParams } from 'react-router-dom';
 
@@ -23,6 +11,7 @@ export default function Recipe() {
 
     useEffect(() => {
         getRecipe(id)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id])
 
     console.log("recipe " + JSON.stringify(recipe));

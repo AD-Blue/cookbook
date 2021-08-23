@@ -14,7 +14,7 @@ export default function Create() {
     const { addRecipe } = useContext(GlobalContext);
 
 
-    const onSubmit = e => {
+    const onSubmit = () => {
 
         const newRecipe = {
             title,
